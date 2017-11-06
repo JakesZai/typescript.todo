@@ -1,14 +1,15 @@
 var container = document.getElementById('container');
 
-function countdown(initial, final = 0, interval = 1) {
-
-	var current = initial;
-
-	while (current > final) {
-		container.innerHTML = current;
-		current -= interval;
-	}
-
+var todo = {
+	id: 123,
+	name: 'Pick up drycleaning',
+	completed: true
 }
 
-countdown(10,4,2)
+container.innerHTML = `
+	<div todo="${todo.id}" class="todo-container">
+		<div class="${todo.completed ? "" : "hidden"} primary text-primary">
+			<span>${todo.name}</span>
+		</div>
+	</div>
+`;
