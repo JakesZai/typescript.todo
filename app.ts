@@ -1,7 +1,14 @@
-var container = document.getElementById('container');
+var array = [
+	"Pickup dry cleaning",
+	"Clean batcave",
+	"Save Gotham"
+];
 
-for (var x = 0; x <= 5; x++){
-	const counter = x;
-	counter = 1;
+/*for (var index in array) {
+	var value = array[index];
+	console.log(`#${index}- ${value}`);
+}*/
+
+for (var value of array) {
+	console.log(value);
 }
-console.log(counter);
